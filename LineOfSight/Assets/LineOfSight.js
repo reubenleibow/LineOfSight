@@ -23,11 +23,11 @@ function Update ()
 	}
 	if(rayHitDistance <= viewDistance && inSight == true)
 	{
-		if(TAngle <= 30)
+		if(TAngle <= fieldView)
 		{
 			Debug.DrawRay(this.transform.position,direction,Color.green);
 		}
-		if(TAngle >= 30)
+		if(TAngle >= fieldView)
 		{
 			Debug.DrawRay(this.transform.position,direction,Color.red);
 		}
