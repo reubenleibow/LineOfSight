@@ -8,11 +8,11 @@ var inSight : boolean;
 function Update () 
 {
 	var hit : RaycastHit;
-	var Rays = Physics.Raycast(this.transform.position,theTarget.transform.position - this.transform.position,hit);
+	Physics.Raycast(this.transform.position,theTarget.transform.position - this.transform.position,hit);
 	var direction = theTarget.transform.position - this.transform.position;
 	var TAngle = Vector3.Angle(direction,this.transform.forward);
 	
-	if(hit.transform.name == "Cylinder")
+	if(hit.transform.name == theTarget.name)
 	{
 		var rayHitDistance = hit.distance;
 		inSight = true;
